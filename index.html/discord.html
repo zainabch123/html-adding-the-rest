@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 70px 225px 2fr;
+        grid-template-rows: 50px 1fr 50px;
+      }
+      .header {
+        background-color: lightgray;
+        border: 2px solid darkgray;
+        grid-column: 3 / 4;
+        grid-row: 1 / span 1;
+        display: grid;
+        grid-template-columns: 40px 40px 40px 200px 40px 40px;
+        grid-template-rows: 1fr;
+        justify-content: end;
+      }
+      .main {
+        background-color: lightgray;
+        border: 2px solid darkgray;
+        grid-column: 3 / 4;
+        grid-row: 2 / span 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px;
+      }
+      .aside-far-left {
+        background-color: lightgray;
+        border: 2px solid darkgray;
+        grid-column: 1 / 2;
+        grid-row: 1 / span 3;
+        display: grid;
+        grid-template-columns: 60px;
+        grid-template-rows: repeat(7, 40px);
+        justify-content: center;
+      }
+      .aside-left {
+        background-color: lightgray;
+        border: 2px solid darkgray;
+        grid-column: 2 / 3;
+        grid-row: 2 / span 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 100px 200px 100px 100px;
+      }
+      .top-aside-left {
+        background-color: lightgray;
+        border: 2px solid darkgray;
+        grid-column: 2 / 3;
+        grid-row: 1 / span 1;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: bold;
+        color: darkgray;
+      }
+      .footer-left {
+        background-color: darkgray;
+        border: 2px solid darkgray;
+        grid-column: 2 / 3;
+        grid-row: 3 / span 1;
+        display: grid;
+        grid-template-columns: 50px;
+        grid-template-rows: 50px;
+      }
+      .footer-main {
+        background-color: darkgray;
+        border: 2px solid lightgray;
+        grid-column: 3 / 4;
+        grid-row: 3 / span 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 5%; margin: 4px"
+        ></div>
+        <div
+          class="search-bar"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+      </div>
+      <div class="main">
+        <div class="info-card" style="border: 2px solid darkgrey"></div>
+        <div class="post1" style="border: 2px solid darkgrey"></div>
+      </div>
+      <div class="aside-left">
+        <div class="nav-buttons" style="border: 2px solid darkgrey"></div>
+        <div class="nav-buttons" style="border: 2px solid darkgrey"></div>
+        <div class="nav-buttons" style="border: 2px solid darkgrey"></div>
+        <div class="nav-buttons" style="border: 2px solid darkgrey"></div>
+        <div class="nav-buttons" style="border: 2px solid darkgrey"></div>
+      </div>
+      <div class="aside-far-left">
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+        <div
+          class="nav-buttons"
+          style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
+        ></div>
+      </div>
+      <div class="top-aside-left">Boolean UK</div>
+      <div class="footer-left">
+        <div
+          class="profile-image"
+          style="border: 2px solid lightgray; border-radius: 50%; margin: 7px"
+        ></div>
+      </div>
+      <div class="footer-main">
+        <div
+          class="message-bar"
+          style="background-color: lightgray; border-radius: 5%; margin: 7px"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
