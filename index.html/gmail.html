@@ -18,8 +18,30 @@
         grid-column: 1 / 5;
         grid-row: 1 / span 1;
         display: grid;
-        grid-template-columns: 300px 1fr 500px;
+        grid-template-columns: 300px 1fr auto;
         grid-template-rows: 1fr;
+        justify-content: center;
+      }
+      .search-bar {
+        display: grid;
+        grid-template-columns: 700px;
+        grid-template-rows: 1fr;
+      }
+      .finder {
+        margin: 5px;
+      }
+      .nav-bar {
+        display: grid;
+        grid-template-columns: 60px 60px 60px 200px;
+        grid-template-rows: 1fr;
+      }
+      .gmail-image {
+        display: grid;
+        justify-content: center;
+      }
+      .nav-image {
+        display: grid;
+        border-radius: 40px;
         justify-content: center;
       }
       .main {
@@ -30,7 +52,15 @@
         color: white;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(17, 50px);
+        grid-template-rows: repeat(16, 50px);
+      }
+      .email {
+        height: 45px;
+        display: grid;
+        grid-template-columns: 20px 100px minmax(100px, 1fr) 80px;
+        margin: 0px;
+        text-align: center;
+        color: black;
       }
       .aside-left {
         background-color: lightgray;
@@ -63,6 +93,74 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 70px);
       }
+      .side-nav-image {
+        display: grid;
+        border-radius: 40px;
+        place-content: center;
+      }
+      @media (max-width: 1500px) {
+        .container {
+          grid-template-columns: 300px 1fr 300px;
+        }
+        .header {
+          grid-template-columns: 300px 725px;
+          justify-content: start;
+        }
+        .aside-far-right {
+          display: none;
+        }
+        .nav-bar {
+          display: none;
+        }
+      }
+      @media (max-width: 1250px) {
+        .container {
+          grid-template-columns: 300px 1fr;
+        }
+        .aside-right {
+          display: none;
+        }
+      }
+      @media (max-width: 1100px) {
+        .header {
+          grid-template-columns: 300px 625px;
+        }
+        .search-bar {
+          grid-template-columns: 600px;
+        }
+      }
+      @media (max-width: 970px) {
+        .header {
+          grid-template-columns: 300px 525px;
+        }
+        .search-bar {
+          grid-template-columns: 500px;
+        }
+      }
+      @media (max-width: 860px) {
+        .header {
+          grid-template-columns: 300px 425px;
+        }
+        .search-bar {
+          grid-template-columns: 400px;
+        }
+      }
+      @media (max-width: 750px) {
+        .header {
+          grid-template-columns: 300px 325px;
+        }
+        .search-bar {
+          grid-template-columns: 300px;
+        }
+      }
+      @media (max-width: 640px) {
+        .header {
+          grid-template-columns: 300px;
+        }
+        .search-bar {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -70,87 +168,122 @@
       <div class="header">
         <div
           class="gmail-logo"
-          style="border: 2px solid darkgrey; margin: 10px; margin-right: 70px"
-          ;
-        ></div>
+          style="
+            background-color: white;
+            border: 2px solid darkgrey;
+            margin: 10px;
+            margin-right: 70px;
+          "
+        >
+          <div class="gmail-image">
+            <img src="gmail-logo-img.png" width="200" height="45" />
+          </div>
+        </div>
         <div
           class="search-bar"
           style="border: 2px solid darkgrey; margin: 10px"
-        ></div>
+        >
+          <div class="finder" style="background-color: darkgrey"></div>
+        </div>
         <div
           class="nav-bar"
           style="border: 2px solid darkgrey; margin: 10px; margin-left: 70px"
-        ></div>
+        >
+          <div
+            class="nav-buttons"
+            style="border: 2px solid darkgrey; border-radius: 40%; margin: 4px"
+          >
+            <img
+              src="nav-button-1.png"
+              width="45"
+              height="35"
+              class="nav-image"
+            />
+          </div>
+          <div
+            class="nav-buttons"
+            style="border: 2px solid darkgrey; border-radius: 40%; margin: 4px"
+          >
+            <img
+              src="nav-button-2.png"
+              width="45"
+              height="35"
+              class="nav-image"
+            />
+          </div>
+          <div
+            class="nav-buttons"
+            style="border: 2px solid darkgrey; border-radius: 40%; margin: 4px"
+          >
+            <img
+              src="nav-button-3.png"
+              width="45"
+              height="35"
+              class="nav-image"
+            />
+          </div>
+          <div class="nav-buttons" style="border: 2px solid darkgrey">
+            <img
+              src="nav-button-4.png"
+              width="150"
+              height="40"
+              class="nav-image"
+            />
+          </div>
+        </div>
       </div>
       <div class="main">
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
-        <div
-          class="email"
-          style="border: 2px solid darkgrey; margin: 4px"
-        ></div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+          <p>Jessica Holman</p>
+          <p>New comments on MCR2020</p>
+          <p>2:25 PM</p>
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
+        <div class="email" style="border: 2px solid darkgrey">
+          <input type="checkbox" />
+        </div>
       </div>
       <div class="aside-left">
         <div
@@ -174,19 +307,47 @@
         <div
           class="nav-button"
           style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
-        ></div>
+        >
+          <img
+            src="side-nav-button-1.png"
+            width="45"
+            height="35"
+            class="side-nav-image"
+          />
+        </div>
         <div
           class="nav-button"
           style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
-        ></div>
+        >
+          <img
+            src="side-nav-button-2.png"
+            width="45"
+            height="35"
+            class="side-nav-image"
+          />
+        </div>
         <div
           class="nav-button"
           style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
-        ></div>
+        >
+          <img
+            src="side-nav-button-3.png"
+            width="45"
+            height="35"
+            class="side-nav-image"
+          />
+        </div>
         <div
           class="nav-button"
           style="border: 2px solid darkgrey; border-radius: 50%; margin: 4px"
-        ></div>
+        >
+          <img
+            src="side-nav-button-4.png"
+            width="45"
+            height="35"
+            class="side-nav-image"
+          />
+        </div>
       </div>
       <div class="aside-right">
         <div
