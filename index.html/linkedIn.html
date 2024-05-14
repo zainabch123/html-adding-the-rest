@@ -5,6 +5,9 @@
     <style>
         *{
             background-color: lightgray;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
         }
       .container {
         height: 100vh;
@@ -23,27 +26,32 @@
         grid-template-columns: 70px 700px 300px;
         grid-template-rows: 1fr;
         justify-content:center;
+        
       }
       .linkedIn-image {
         display: grid;
         place-content: center;
-    
+        align-items: center;
       }
-
        .nav-bar {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 45px;
        }
-
        .search-bar {
         display: grid;
         grid-template-columns: 300px;
         grid-template-rows: 1fr;
+        align-items: center;
        }
        .finder {
         margin: 5px
        }
+       .search-input {
+        width: 100%;
+        height:30px;
+        background-color: white;
+      }
        .top-main {
         border: 3px dotted darkblue;
         background-color: darkgray;
@@ -55,17 +63,42 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
       }
-
       .top-main1 {
         display: grid;
         grid-template-columns: 50px 1fr;
         grid-template-rows: 1fr;
+        align-items: center;
+        background-color: white;
       }
-
+      .profile-image img {
+        display: grid;
+        border-radius: 50%;
+      }
+      .post-input {
+        width: 98%;
+        height: 35px;
+        background-color: white;
+      }
       .top-main2 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        background-color: white;
+      }
+      .top-main2-links {
+        background-color: white;
+      }
+      .top-main2-links a {
+        display: inline-block;
+        margin-right: 50px;
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: white;
+      }
+      #Article {
+        margin-right: 0px;
       }
       .centre-main {
         border: 3px dotted darkblue;
@@ -89,6 +122,57 @@
         grid-template-columns: 1fr;
         grid-template-rows: 3fr 1fr 1fr 1fr;
         max-height: 500px;
+        border-radius: 10px;
+      }
+      .info-card1 {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 95px 145px;
+        border-radius: 10px;
+      }
+      .background-image {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .background-image img {
+        display: grid;
+      }
+      .profile-image2 {
+        display: block;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        align-items: center;
+        position: absolute;
+        top: 13%;
+        left: 23%;
+      }
+      .profile-image2 img {
+        border-radius: 50%;
+      }
+      .profile-text {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .profile-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        background-color: white;
+      }
+      .profile-bio {
+        color: gray;
+        background-color: white;
       }
       .aside-right {
         border: 3px dotted darkblue;
@@ -180,25 +264,79 @@
           </div>
         </div>
         <div class="search-bar" style="border: 2px solid black;">
-            <div class="finder" style = "background-color: darkgrey;"></div>
+            <div class="finder" style = "background-color: darkgrey;">
+             <form action="">
+              <input type="text" class="search-input" placeholder="Search...">
+            </div>
         </div>
         <div class="nav-bar" style="border: 2px solid black;">  
-            <div class="nav-buttons" style = "border: 2px solid darkgrey;"></div>
-            <div class="nav-buttons" style = "border: 2px solid darkgrey;"></div>
-            <div class="nav-buttons" style = "border: 2px solid darkgrey;"></div>
-            <div class="nav-buttons" style = "border: 2px solid darkgrey;"></div>
+            <div class="nav-buttons" style = "border: 2px solid darkgrey;">
+              <a href="">
+                <img
+              src="home-button.png"
+              width="100%"
+              height="100%"
+              class="nav-image"
+            />
+            </a>
+            </div>
+            <div class="nav-buttons" style = "border: 2px solid darkgrey;">
+             <a href="">
+                <img
+              src="network-button.png"
+              width="100%"
+              height="100%"
+              class="nav-image"
+            />
+            </a>
+            </div>
+            <div class="nav-buttons" style = "border: 2px solid darkgrey;">
+             <a href="">
+                <img
+              src="jobs-button.png"
+              width="100%"
+              height="100%"
+              class="nav-image"
+            />
+            </a>
+            </div>
+            <div class="nav-buttons" style = "border: 2px solid darkgrey;">
+             <a href="">
+                <img
+              src="messaging-button.png"
+              width="100%"
+              height="100%"
+              class="nav-image"
+            />
+            </a>
+            </div>
       </div>
       </div>
       <div class="top-main">
         <div class="top-main1" style="border: 2px solid black;">
-            <div class="profile-image" style = "border: 2px solid darkgrey; border-radius: 50%; margin: 3px;"></div>
-            <div class="start-a-post" style = "border: 2px solid darkgrey; border-radius: 5%; margin: 3px;"></div>
+            <div class="profile-image" style = "border: 2px solid darkgrey; border-radius: 50%; margin: 3px;">
+                <img src="linkedIn-profile-image.png" width="100%" height="45" />
+            </div>
+            <div class="start-a-post" style = "border: 2px solid darkgrey; border-radius: 5%; margin: 3px;">
+            <form action="">
+              <input type="text" class="post-input" placeholder="Start a post...">
+            </div>
         </div>
         <div class="top-main2" style="border: 2px solid black;">
-              <div class="sharing-buttons" style = "border: 2px solid darkgrey;"></div>
-              <div class="sharing-buttons" style = "border: 2px solid darkgrey;"></div>
-              <div class="sharing-buttons" style = "border: 2px solid darkgrey;"></div>
-              <div class="sharing-buttons" style = "border: 2px solid darkgrey;"></div>
+           <div class ="top-main2-links">
+            <a id="Photos" href="">
+                  Photos 
+                </a>
+            <a id="Video" href="">
+                  Video
+                </a>
+            <a id="Document" href="">
+                  Document
+                </a>
+            <a id="Article" href="">
+                  Write article
+                </a>
+                </div>
         </div>
       </div>
       <div class="centre-main">
@@ -206,10 +344,17 @@
          <div class="post2" style = "border: 2px solid darkgrey;"></div>
       </div>
       <div class="aside-left">
-        <div class="info-card" style = "border: 2px solid darkgrey;"></div>
-        <div class="info-card" style = "border: 2px solid darkgrey;"></div>
-        <div class="info-card" style = "border: 2px solid darkgrey;"></div>
-        <div class="info-card" style = "border: 2px solid darkgrey;"></div>
+        <div class="info-card1" style = "border: 2px solid darkgrey;">
+          <div class="background-image" style="border: 2px solid black;"> <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" width="100%" height="100%" /></div>
+          <div class="profile-image2" style="border: 2px solid black;">  <img src="linkedIn-profile-image.png" width="100%" height="100%" /></div>
+          <div class="profile-text">
+            <div class="profile-name">Nicolas Marcora</div>
+            <div class="profile-bio">Head of Teaching UK at Boolean <br/> Careers</div>
+          </div>
+        </div>
+        <div class="info-card2" style = "border: 2px solid darkgrey;"></div>
+        <div class="info-card3" style = "border: 2px solid darkgrey;"></div>
+        <div class="info-card4" style = "border: 2px solid darkgrey;"></div>
       </div>
       <div class="aside-right">
         <div class="info-card" style = "border: 2px solid darkgrey;"></div>
@@ -217,7 +362,6 @@
         <div class="info-card" style = "border: 2px solid darkgrey;"></div>
         <div class="info-card" style = "border: 2px solid darkgrey;"></div>
         <div class="info-card" style = "border: 2px solid darkgrey;"></div>
-      </div>
       </div>
       </div>
     </div>
